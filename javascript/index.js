@@ -27,31 +27,33 @@ function updateTime() {
 let intervalId;
 
 function updateCity(event) {
-  clearInterval(intervalId);
-
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+  let cityTime = moment().tz(cityTimeZone);
   let citiesElement = document.querySelector("#cities");
-
-  function updateCityTime() {
-    let cityTime = moment().tz(cityTimeZone);
-    citiesElement.innerHTML = `
+  citiesElement.innerHTML = `
   <div class="city">
     <div>
       <h2>${cityName}</h2>
       <div class="date">${cityTime.format("MMMM	Do YYYY")}</div>
     </div>
     <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format(
-      "A"
-    )}</small></div>
+    "A"
+  )}</small></div>
   </div>
   <a href="/" class="go-back">Go back</a>`;
-  }
-  updateCityTime();
-  intervalId = setInterval(updateCityTime, 1000);
+
+  clearInterval(intervalId);
+  intervalId = setInterval(() => {
+    cityTime = moment().tz(cityTimeZone);
+    let timeElement = document.querySelector(".time");
+    timeElement.innerHTML = `${cityTime.format(
+      "h:mm:ss"
+    )} <small>${cityTime.format("A")}</small>`;
+  }, 1000);
 }
 
 updateTime();
