@@ -24,15 +24,19 @@ function updateTime() {
     );
   }
 }
+let intervalId;
 
 function updateCity(event) {
+  clearInterval(intervalId);
+
   let cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
   let citiesElement = document.querySelector("#cities");
-  setInterval(() => {
+
+  function updateCityTime() {
     let cityTime = moment().tz(cityTimeZone);
     citiesElement.innerHTML = `
   <div class="city">
@@ -45,7 +49,9 @@ function updateCity(event) {
     )}</small></div>
   </div>
   <a href="/" class="go-back">Go back</a>`;
-  }, 1000);
+  }
+  updateCityTime();
+  intervalId = setInterval(updateCityTime, 1000);
 }
 
 updateTime();

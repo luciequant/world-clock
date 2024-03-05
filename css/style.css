@@ -32,6 +32,9 @@ select {
   background-color: #e8f5f7;
   border-color: #f9c0c6;
 }
+.styled {
+  color: #ee8792;
+}
 h2 {
   margin: 0 0 5px;
   font-size: 28px;
