@@ -1,27 +1,28 @@
 body {
   background: linear-gradient(
-    109.6deg,
-    rgb(255, 221, 225) 11.2%,
-    rgb(255, 255, 255) 92.2%
+    179.4deg,
+    rgb(253, 240, 233) 2.2%,
+    rgb(255, 194, 203) 96.2%
   );
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
   color: rgb(0, 0, 0);
+  font-family: "Work Sans", sans-serif;
 }
 .container {
   background-color: #faf0f2c1;
   max-width: 600px;
-  margin: 40px auto;
-  padding: 60px;
+  margin: 20px auto;
+  padding: 40px;
   border-radius: 14px;
-  box-shadow: 15px 15px 52px 15px rgb(239, 208, 224);
+  box-shadow: 15px 15px 52px 15px rgba(234, 159, 181, 0.722);
 }
 h1 {
   text-align: center;
   font-size: 40px;
-  color: #ee8792;
+  color: #ee879d;
 }
 select {
   display: block;
@@ -30,10 +31,11 @@ select {
   border-radius: 12px;
   padding: 12px;
   background-color: #e8f5f7;
-  border-color: #f9c0c6;
+  border-color: #ee879d;
+  font-family: "Work Sans", sans-serif;
 }
 .styled {
-  color: #ee8792;
+  color: #ee879d;
 }
 h2 {
   margin: 0 0 5px;
@@ -48,13 +50,14 @@ h2 {
   border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
 }
 .date {
-  color: #f5b0b7;
+  color: #ee879d;
+  font-weight: bold;
 }
 
 .time {
   font-size: 48px;
   font-weight: bold;
-  color: #a8b2bf;
+  color: #0000008a;
 }
 
 .time small {
@@ -62,10 +65,29 @@ h2 {
   vertical-align: middle;
   line-height: 48px;
 }
+.go-back {
+  color: #518187;
+  font-weight: normal;
+}
+.material-symbols-outlined {
+  display: inline-block;
+  vertical-align: middle;
+}
 footer {
   text-align: center;
   color: rgb(0, 0, 0, 0.7);
+  font-size: 16px;
+}
+footer .material-symbols-outlined {
+  color: #ee879d;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 24px;
+}
+strong {
+  color: #ee879d;
 }
 a {
-  color: #5de0f1;
+  color: #ee879d;
+  font-weight: bold;
 }

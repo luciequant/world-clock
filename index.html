@@ -4,31 +4,73 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World clock</title>
   </head>
   <body>
     <div class="container">
-      <h1>🌍 World Clock 🕐</h1>
+      <h1>
+        W<span class="material-symbols-outlined"> travel_explore </span>rld
+        Cl<span class="material-symbols-outlined"> schedule </span>ck
+      </h1>
       <select id="city" class="styled">
         <option value="">Select a city...</option>
         <option value="current">My current location</option>
-        <option value="Europe/Prague">Prague</option>
+        <option value="Pacific/Honolulu">Honolulu</option>
+        <option value="Pacific/Tahiti">Tahiti</option>
+        <option value="America/Los_Angeles">Los Angeles</option>
         <option value="America/New_York">New York</option>
+        <option value="America/Mexico_City">Mexico City</option>
+        <option value="America/Lima">Lima</option>
+        <option value="Europe/Madrid">Madrid</option>
+        <option value="Europe/Berlin">Berlin</option>
+        <option value="Europe/Prague">Prague</option>
+        <option value="Europe/Athens">Athens</option>
+        <option value="Africa/Dakar">Dakar</option>
+        <option value="Africa/Johannesburg">Johannesburg</option>
+        <option value=" Asia/Hong_Kong">Hong Kong</option>
+        <option value="Asia/Seoul">Seoul</option>
+        <option value="Asia/Dubai">Dubai</option>
+        <option value="Australia/Sydney">Sydney</option>
+        <option value="Pacific/Norfolk">Norfolk</option>
         <option value="Pacific/Auckland">Auckland</option>
       </select>
       <div id="cities">
         <div class="city" id="vancouver">
           <div>
-            <h2>Vancouver 🇨🇦</h2>
+            <h2>Vancouver</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="buenos-aires">
+          <div>
+            <h2>Buenos Aires</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="london">
+          <div>
+            <h2>London</h2>
             <div class="date"></div>
           </div>
           <div class="time"></div>
         </div>
         <div class="city" id="tokyo">
           <div>
-            <h2>Tokyo 🇯🇵</h2>
+            <h2>Tokyo</h2>
             <div class="date"></div>
           </div>
           <div class="time"></div>
@@ -36,8 +78,9 @@
       </div>
     </div>
     <footer>
-      This project was coded by <strong>Lucie Quantová</strong> and is open
-      sourced on
+      This project was coded with
+      <span class="material-symbols-outlined"> favorite </span> by
+      <strong>Lucie Quantová</strong> and is open sourced on
       <a href="https://github.com/luciequant/world-clock" target="_blank"
         >GitHub</a
       >

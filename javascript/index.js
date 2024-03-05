@@ -11,6 +11,31 @@ function updateTime() {
       "h:mm:ss [<small>]A[<small>]"
     );
   }
+  //Buenos Aires
+  let buenosAiresElement = document.querySelector("#buenos-aires");
+  if (buenosAiresElement) {
+    let buenosAiresDataElement = buenosAiresElement.querySelector(".date");
+    let buenosAiresTimeElement = buenosAiresElement.querySelector(".time");
+    let buenosAiresTime = moment().tz("America/Argentina/Buenos_Aires");
+
+    buenosAiresDataElement.innerHTML = buenosAiresTime.format("MMMM Do YYYY");
+    buenosAiresTimeElement.innerHTML = buenosAiresTime.format(
+      "h:mm:ss [<small>]A[<small>]"
+    );
+  }
+  //London
+  let londonElement = document.querySelector("#london");
+  if (londonElement) {
+    let londonDataElement = londonElement.querySelector(".date");
+    let londonTimeElement = londonElement.querySelector(".time");
+    let londonTime = moment().tz("Europe/London");
+
+    londonDataElement.innerHTML = londonTime.format("MMMM Do YYYY");
+    londonTimeElement.innerHTML = londonTime.format(
+      "h:mm:ss [<small>]A[<small>]"
+    );
+  }
+
   //Tokyo
   let tokyoElement = document.querySelector("#tokyo");
   if (tokyoElement) {
