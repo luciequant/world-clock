@@ -11,25 +11,27 @@
   <body>
     <div class="container">
       <h1>🌍 World Clock 🕐</h1>
-      <select>
+      <select id="city">
         <option value="">Select a city...</option>
-        <option value="">Madrid</option>
-        <option value="">New York</option>
-        <option value="">Wellington</option>
+        <option value="Europe/Prague">Prague</option>
+        <option value="America/New_York">New York</option>
+        <option value="Pacific/Auckland">Auckland</option>
       </select>
-      <div class="city" id="vancouver">
-        <div>
-          <h2>Vancouver 🇨🇦</h2>
-          <div class="date">August 15th 2022</div>
+      <div id="cities">
+        <div class="city" id="vancouver">
+          <div>
+            <h2>Vancouver 🇨🇦</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time">1:48:15 <small>AM</small></div>
-      </div>
-      <div class="city" id="tokyo">
-        <div>
-          <h2>Tokyo 🇯🇵</h2>
-          <div class="date">August 15th 2022</div>
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Tokyo 🇯🇵</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
         </div>
-        <div class="time">1:48:15 <small>AM</small></div>
       </div>
     </div>
     <footer>
